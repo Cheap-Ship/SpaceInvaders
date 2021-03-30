@@ -18,12 +18,12 @@ public class SpawnInvaders : MonoBehaviour
         
         for(int l = 0; l < Invaders.Length; l++)
         {
-            for(float r = 0; r < 1; r += 0.5f)
+            for (float r = 0; r < 1; r += 0.5f)
             {
                 for (int i = 1; i <= nInvaders; i++)
                 {
                     GameObject newInvader = Instantiate(Invaders[l], transform);
-                    newInvader.transform.position = new Vector3(minX + i, l - 0.5f + r, 0f);
+                    newInvader.transform.position = new Vector3(minX + i, l - 0.5f + r, 0);
                 }
             }
         }
