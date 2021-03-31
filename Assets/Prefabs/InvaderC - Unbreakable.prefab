@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4782901926961192605
+--- !u!1 &14874733704929770
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,39 +8,39 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4782901926961192592}
-  - component: {fileID: 4782901926961192595}
-  - component: {fileID: 4782901926961192594}
-  - component: {fileID: -2397055595649337452}
-  - component: {fileID: 8858891885712156202}
+  - component: {fileID: 2898415986130917295}
+  - component: {fileID: 501101282826053363}
+  - component: {fileID: 6224488188546989707}
+  - component: {fileID: 484601185856899010}
+  - component: {fileID: -6180206422579480165}
   m_Layer: 8
-  m_Name: InvaderB
-  m_TagString: Breakable
+  m_Name: InvaderC - Unbreakable
+  m_TagString: Unbreakable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4782901926961192592
+--- !u!4 &2898415986130917295
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4782901926961192605}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 14874733704929770}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &4782901926961192595
+--- !u!212 &501101282826053363
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4782901926961192605}
+  m_GameObject: {fileID: 14874733704929770}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 3598d2ebef12c994cb604b40cc0734da, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 0ccfba425503b464798b1f6dbf49b88a, type: 3}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -84,17 +84,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &4782901926961192594
+--- !u!95 &6224488188546989707
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4782901926961192605}
+  m_GameObject: {fileID: 14874733704929770}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 5908ec55596e53449a315d01f3a26318, type: 2}
+  m_Controller: {fileID: 9100000, guid: b566077a9939b1c4a9d15034f031a52d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -103,13 +103,13 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &-2397055595649337452
+--- !u!61 &484601185856899010
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4782901926961192605}
+  m_GameObject: {fileID: 14874733704929770}
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
@@ -129,17 +129,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.4, y: 0.26666668}
   m_EdgeRadius: 0
---- !u!114 &8858891885712156202
+--- !u!114 &-6180206422579480165
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4782901926961192605}
+  m_GameObject: {fileID: 14874733704929770}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13600147ca7589f49b6203162d4dfadb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fire: {fileID: 4987230489154480712, guid: 443a2a25932dd124ab737dfe2e3b6099, type: 3}
+  fire: {fileID: 3739498361513015453, guid: 3c0c24fd620b89648b27dff74fd3d93f, type: 3}
   cooldown: 1.5
