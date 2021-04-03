@@ -7,6 +7,7 @@ public class Ship : MonoBehaviour
     [SerializeField] GameObject fire;
     [SerializeField] Transform nozzle;
     [SerializeField] float velocity = 5f;
+    [SerializeField] int lives = 3;
 
     float minX, maxX;
 
@@ -39,7 +40,11 @@ public class Ship : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Destroy(gameObject);
         Destroy(collision.gameObject);
+        lives--;
+        if (lives <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

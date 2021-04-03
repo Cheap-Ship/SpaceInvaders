@@ -12,6 +12,10 @@ public class SpawnInvaders : MonoBehaviour
     [SerializeField] GameObject invaderCUnbreak;
     [SerializeField] int nInvaders = 7;
     [SerializeField] float unbreakChance = 0.15f;
+    [SerializeField] float cooldown = 1f;
+    float timer = 0f, border;
+    int flagX = 1; // 1 = direita ; -1 = esquerda
+    bool flagY = true; // True = desce ; False = Não desce
 
     void Awake()
     {
@@ -35,9 +39,32 @@ public class SpawnInvaders : MonoBehaviour
                     {
                         newInvader = Instantiate(Invaders[l], transform);
                     }
-                    newInvader.transform.position = new Vector3(minX + i, l - 0.5f + r, 0);
+                    newInvader.transform.position = new Vector3(minX + i, (l - 0.5f + r)/1.25f + 1f, 0);
                 }
             }
+        }
+
+        border = (8 - (float)nInvaders) / 2; // Borda igual para qualquer quantidade de invaders
+    }
+
+    private void Update()
+    {
+        timer += Time.deltaTime;
+        if (timer >= cooldown)
+        {
+            Vector3 position = transform.position;
+            if (transform.position.x > -border && transform.position.x < border || !flagY)
+            {
+                position.x += (border / 5) * flagX; // Movimentam-se sempre 5 vezes entre o centro e a borda (11 de lado a lado)
+                flagY = true;
+            } else if (flagY)
+            {
+                position.y -= 0.4f;
+                flagX *= -1;
+                flagY = false;
+            }
+            transform.position = position;
+            timer = 0f;
         }
     }
 }

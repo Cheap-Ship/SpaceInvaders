@@ -392,7 +392,15 @@ MonoBehaviour:
   invaderB: {fileID: 4782901926961192605, guid: 057019a7d2de24d42af1af5ec127aad5,
     type: 3}
   invaderC: {fileID: 14874733704929770, guid: 41f8bcbad26462148ae7c26c56f28876, type: 3}
+  invaderAUnbreak: {fileID: 6359829378288198247, guid: bcb61eb965abbef4ca8b06670863ad88,
+    type: 3}
+  invaderBUnbreak: {fileID: 4782901926961192605, guid: 07f77ec47e305d24ea9a1e02a13ede7a,
+    type: 3}
+  invaderCUnbreak: {fileID: 14874733704929770, guid: c9101971b35000641ba90b919bd1845d,
+    type: 3}
   nInvaders: 7
+  unbreakChance: 0.15
+  cooldown: 1
 --- !u!1001 &2667488290796031911
 PrefabInstance:
   m_ObjectHideFlags: 0

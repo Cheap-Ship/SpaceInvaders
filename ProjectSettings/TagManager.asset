@@ -6,6 +6,8 @@ TagManager:
   tags:
   - ShipFire
   - InvaderFire
+  - Breakable
+  - Unbreakable
   layers:
   - Default
   - TransparentFX
