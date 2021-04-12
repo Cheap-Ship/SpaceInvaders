@@ -5,7 +5,7 @@ using UnityEngine;
 public class Invader : MonoBehaviour
 {
     [SerializeField] GameObject fire = null;
-    [SerializeField] float cdMult = 10f; // Multipicador do cooldown de disparo
+    [SerializeField] float cdMax = 10f; // Máximo do cooldown de disparo
     [SerializeField] float cdMin = 1f; // Mínimo para o cooldown de disparo
     [SerializeField] int armor = 10;
     float cooldown, timer = 0f;
@@ -31,7 +31,7 @@ public class Invader : MonoBehaviour
 
     private void SetCooldown()
     {
-        cooldown = cdMin + Random.value * (cdMult - cdMin); // Cooldown será entre 0 e o multipicador
+        cooldown = Random.Range(cdMin, cdMax); 
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
